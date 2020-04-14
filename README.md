@@ -1,6 +1,6 @@
 # ProLoNets
 
-This project houses all of the code for submission 2254, **Encoding Human Experts' Domain Knowledge to Warm Start Reinforcement Learning**. 
+This project houses all of the code for the submission, **Encoding Human Experts' Domain Knowledge to Warm Start Reinforcement Learning**. 
 
 ### Requirements
 
@@ -23,6 +23,7 @@ For the `-a` or `--agent_type` flag, valid options are:
 * `heuristic` for the heuristic only (not available in the full game of StarCraftII)
 * `fc` for a fully-connected agent
 * `lstm` for an LSTM agent
+* `djinn` for a DJINN agent
 
 #### gym_runner.py
 
@@ -45,15 +46,19 @@ This file runs the FindAndDefeatZerglings minigame from the SC2LE. Running this 
 
 Running a ProLoNet agent:
 ```
-python minigame_runner.py -a prolo -deep -e 2000
+python minigame_runner.py -a prolo -deep -e 1000
 ```
 And a fully-connected agent:
 ```
-python minigame_runner.py -a fc -e 2000
+python minigame_runner.py -a fc -e 1000
 ```
 And an LSTM agent:
 ```
-python minigame_runner.py -a lstm -e 2000
+python minigame_runner.py -a lstm -e 1000
+```
+And a DJINN agent:
+```
+python minigame_runner.py -a djinn -e 1000
 ```
 
 #### sc_runner.py
